@@ -1,0 +1,15 @@
+.about-card{
+    padding: 4rem 2rem;
+    box-shadow: 0 1rem 2rem rgba(#000, .2);
+
+    &__icon{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    &__text{
+        display: block;
+        font-size: 1.7rem;
+        margin-top: 2rem;
+    }
+}

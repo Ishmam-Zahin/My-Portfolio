@@ -1,0 +1,50 @@
+.home{
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .home-container{
+        display: grid;
+        grid-template-rows: repeat(3, min-content);
+        grid-template-columns: minmax(min-content, max-content);
+        row-gap: 3rem;
+        align-content: center;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        padding: 2rem 8rem;
+        transition: all .5s;
+
+        animation-name: visible;
+        animation-duration: .5s;
+        animation-fill-mode: backwards;
+
+        & > *{
+            animation-name: moveUp;
+            animation-duration: 1s;
+            animation-fill-mode: backwards;
+        }
+
+        &__info{
+            font-size: 2rem;
+            animation-delay: 100ms;
+        }
+
+        a{
+            justify-self: start;
+            animation-delay: 200ms;
+        }
+
+        &--1{
+            background-image: linear-gradient(to right bottom, rgba(#fff, .7), rgba($color-grey-light-1, .7)), url("../img/bg-1.jpg");
+        }
+
+        &--2{
+            background-image: linear-gradient(to right bottom, rgba(#fff, .7), rgba($color-grey-light-1, .7)), url("../img/bg-2.jpg");
+        }
+    }
+}

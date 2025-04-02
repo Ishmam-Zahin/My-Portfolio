@@ -1,0 +1,32 @@
+.about{
+
+    &__para{
+        font-size: 1.8rem;
+    }
+
+    .about-card-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+
+    &__block{
+        width: 100%;
+        height: 20rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #eec280;
+
+        p{
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+        }
+
+        a{
+            align-self: flex-start;
+        }
+    }
+}

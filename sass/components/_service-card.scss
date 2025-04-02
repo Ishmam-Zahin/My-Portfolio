@@ -1,0 +1,26 @@
+.service-card{
+    padding: 0 2rem 5rem 2rem;
+    text-align: center;
+    box-shadow: 0 1rem 2rem rgba(#000, .2);
+    border-bottom: 2px solid red;
+
+    &__icon{
+        border: 1px solid blue;
+        background-color: grey;
+        display: inline-block;
+        padding: 4rem;
+        margin-top: -50%;
+
+        clip-path: polygon(0 3rem, 50% 0, 100% 3rem, 100% 9rem, 50% 100%, 0rem 9rem);
+
+        svg{
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    &__para{
+        font-size: 1.7rem;
+        margin-top: 5rem;
+    }
+}

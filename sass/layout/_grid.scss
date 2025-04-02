@@ -1,0 +1,15 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr [nav-start] minmax(min-content, 25rem) [nav-end main-start] minmax(min-content, 100rem) [main-end] 1fr;
+    grid-template-rows: 100vh;
+    justify-items: stretch;
+
+    position: relative;
+
+    @include response($break-width-1){
+        grid-template-columns: [main-start] 1fr [main-end];
+    }
+}

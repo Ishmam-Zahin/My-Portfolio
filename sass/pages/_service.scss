@@ -1,0 +1,31 @@
+.services{
+    .service-card-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        column-gap: 5rem;
+        row-gap: 10rem;
+    }
+
+        .service-counter-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+            column-gap: 3rem;
+            row-gap: 3rem;
+            padding: 8rem 5rem;
+            background-image: url("../img/bg-3.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+
+            .service-counter{
+                text-align: center;
+                color: #fff;
+
+                span{
+                    font-size: 3rem;
+                    display: block;
+                }
+
+                
+        }
+    }
+}

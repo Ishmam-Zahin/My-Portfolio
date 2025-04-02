@@ -1,0 +1,13 @@
+.skills{
+
+    &__para{
+        font-size: 1.7rem;
+    }
+
+    .skill-progress-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        row-gap: 5rem;
+        column-gap: 3rem;
+    }
+}
