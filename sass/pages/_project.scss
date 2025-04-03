@@ -1,4 +1,32 @@
 .projects{
-    height: 100vh;
-    background-color: red;
+    border: 1px solid red;
+
+    .options{
+        display: flex;
+        flex-direction: row;
+
+        button{
+            margin-right: 2rem;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            transition: all .2s;
+
+            &:hover{
+                color: blue;
+            }
+        }
+    }
+
+    .works-container{
+        .works{
+            height: 50rem;
+            width: 100%;
+            border: 1px solid red;
+        }
+
+        .works-hide{
+            display: none;
+        }
+    }
 }

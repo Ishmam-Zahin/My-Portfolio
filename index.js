@@ -3,9 +3,11 @@ const home1 = home.getElementsByClassName("home-container--1")[0];
 const home2 = home.getElementsByClassName("home-container--2")[0];
 const navbar = document.getElementsByClassName("nav-bar")[0];
 const navButton = document.getElementsByClassName("btn-nav")[0];
+const works = document.getElementsByClassName("works-container")[0].children;
 let homeVisible = false;
 let navBarOpen = false;
 let homeTimer = null;
+let currentWorks = 0;
 
 const homeOvserver = new IntersectionObserver(entries => {
     if(entries[0].isIntersecting){
@@ -70,3 +72,22 @@ window.addEventListener("hashchange", () => {
         toggleNav();
     }
 })
+
+
+function toggleDropDown(element){
+    if(!element.classList.contains("dropdown--large")){
+        element.classList.toggle("dropdown--large");
+        const height = element.getElementsByClassName("dropdown__text")[0].clientHeight + 2 + 65 + 5;
+        element.style.height = height + "px";
+    }
+    else{
+        element.classList.toggle("dropdown--large");
+        element.style.height = "65px";
+    }
+}
+
+function toggleWorks(index){
+    works[currentWorks].classList.toggle("works-hide");
+    currentWorks = index;
+    works[currentWorks].classList.toggle("works-hide");
+}

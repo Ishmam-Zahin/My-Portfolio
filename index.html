@@ -22,7 +22,7 @@
                 <li class="nav-list__item nav-list__item--3"><a href="#services">Services</a></li>
                 <li class="nav-list__item nav-list__item--4"><a href="#skills">Skills</a></li>
                 <li class="nav-list__item nav-list__item--5"><a href="#education">Education</a></li>
-                <li class="nav-list__item nav-list__item--6"><a href="#experience">Experience</a></li>
+                <li class="nav-list__item nav-list__item--6"><a href="#experiences">Experience</a></li>
                 <li class="nav-list__item nav-list__item--7"><a href="#projects">Projects</a></li>
                 <li class="nav-list__item nav-list__item--8"><a href="#contact">Contact</a></li>
             </nav>
@@ -189,13 +189,82 @@
             <section class="education" id="education">
                 <h2 class="heading-2 u-margin-top-large">Education</h2>
                 <h3 class="heading-3 u-margin-top-small">Education</h3>
-                <label for="xxx"></label>
-                <input type="checkbox" id="xxx" name="x">
-                <label for="xxx2"></label>
-                <input type="checkbox" id="xxx2" name="x">
+                <div class="dropdown u-margin-top-medium" onclick="toggleDropDown(this)">
+                    <div class="dropdown__header">
+                        <p>Bachelor Degree of Computer Science</p>
+                        <div class="plus"></div>
+                    </div>
+                    <div class="dropdown__text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</div>
+                </div>
+                <div class="dropdown" onclick="toggleDropDown(this)">
+                    <div class="dropdown__header">
+                        <p>Higher Secondary</p>
+                        <div class="plus"></div>
+                    </div>
+                    <div class="dropdown__text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</div>
+                </div>
+                <div class="dropdown" onclick="toggleDropDown(this)">
+                    <div class="dropdown__header">
+                        <p>S.S.C</p>
+                        <div class="plus"></div>
+                    </div>
+                    <div class="dropdown__text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</div>
+                </div>
+                <div class="dropdown" onclick="toggleDropDown(this)">
+                    <div class="dropdown__header">
+                        <p>J.S.C</p>
+                        <div class="plus"></div>
+                    </div>
+                    <div class="dropdown__text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</div>
+                </div>
             </section>
-            <section class="experience" id="experience">experience</section>
-            <section class="projects" id="projects">projects</section>
+            <section class="experiences" id="experiences">
+                <h2 class="heading-2 u-margin-top-large">Experience</h2>
+                <h3 class="heading-3 u-margin-top-small">Work Experience</h3>
+                <div class="experience-container u-margin-top-medium">
+                    <div class="experience">
+                        <svg class="icon">
+                            <use xlink:href="img/sprite.svg#icon-pencil2"/>
+                        </svg>
+                        <div class="experience-block">
+                            <div class="experience__header">Full Stack Developer <span>2017-2018</span></div>
+                            <p class="experience__text">Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare all put. Added forth chief trees but rooms think may.</p>
+                        </div>
+                    </div>
+                    <div class="experience">
+                        <svg class="icon">
+                            <use xlink:href="img/sprite.svg#icon-pencil2"/>
+                        </svg>
+                        <div class="experience-block">
+                            <div class="experience__header">Full Stack Developer <span>2017-2018</span></div>
+                            <p class="experience__text">Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare all put. Added forth chief trees but rooms think may.</p>
+                        </div>
+                    </div>
+                    <div class="experience">
+                        <svg class="icon">
+                            <use xlink:href="img/sprite.svg#icon-pencil2"/>
+                        </svg>
+                        <div class="experience-block">
+                            <div class="experience__header">Full Stack Developer <span>2017-2018</span></div>
+                            <p class="experience__text">Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare all put. Added forth chief trees but rooms think may.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="projects" id="projects">
+                <h2 class="heading-2 u-margin-top-large">Projects</h2>
+                <h3 class="heading-3 u-margin-top-small">My Recent works</h3>
+                <div class="options  u-margin-top-medium">
+                    <button onclick="toggleWorks(0)">CSS</button>
+                    <button onclick="toggleWorks(1)">REACT</button>
+                    <button onclick="toggleWorks(2)">DJANGO</button>
+                </div>
+                <div class="works-container u-margin-top-medium">
+                    <div class="works css-works">css</div>
+                    <div class="works works-hide react-works">react</div>
+                    <div class="works works-hide django-works">django</div>
+                </div>
+            </section>
             <section class="contact" id="contact">contact</section>
         </main>
     </div>

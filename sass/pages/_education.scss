@@ -1,3 +1,57 @@
 .education{
-    border: 1px solid red;
+
+    .dropdown{
+        margin-bottom: 1rem;
+        transition: all .2s;
+        overflow: hidden;
+        height: 6.5rem;
+
+        &__header{
+            border: 1px solid green;
+            font-size: 2rem;
+            padding: 0 3rem;
+            cursor: pointer;
+            height: 6.5rem;
+            transition: all .2s;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .plus{
+                width: 2rem;
+                border-bottom: 2px solid currentColor;
+                position: relative;
+
+                &::after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    border-bottom: 2px solid currentColor;
+                    transform: rotate(90deg);
+
+                }
+            }
+        }
+
+        &__text{
+            font-size: 1.8rem;
+            padding: 3rem;
+            margin-top: .5rem;
+            border: 1px solid red;
+        }
+    }
+
+    .dropdown--large{
+        .dropdown__header{
+            background-color: blue;
+            color: #fff;
+
+            .plus::after{
+                display: none;
+            }
+        }
+    }
+
 }
