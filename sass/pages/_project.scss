@@ -1,7 +1,6 @@
 .projects{
-    border: 1px solid red;
 
-    .options{
+    .project-options{
         display: flex;
         flex-direction: row;
 
@@ -16,13 +15,145 @@
                 color: blue;
             }
         }
+
+        .work-active{
+            color: blue;
+        }
     }
 
     .works-container{
         .works{
-            height: 50rem;
-            width: 100%;
-            border: 1px solid red;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            column-gap: 2rem;
+            row-gap: 4rem;
+
+            .work{
+
+                .work-container{
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &__bg{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                }
+
+                &__info{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 5rem;
+                    background-color: rgba(128, 128, 128, 0.489);
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    @include response(25rem){
+                        padding: .5rem;
+                    }
+
+                    span{
+                        font-size: 1.9rem;
+                        color: #fff;
+                        text-transform: uppercase;
+
+                        @include response(25rem){
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    button{
+                        border: 1px solid #fff;
+                        background-color: transparent;
+                        border-radius: 5px;
+                        padding: 1rem 2rem;
+                        color: #fff;
+                        cursor: pointer;
+                        text-transform: uppercase;
+
+                        @include response(25rem){
+                            font-size: 1.2rem;
+                        }
+                    }
+
+                    a{
+                        font-size: 1.6rem;
+                        text-decoration: none;
+                        color: #fff;
+                        font-weight: bolder;
+                        font-size: 2rem;
+
+                        @include response(25rem){
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+
+                &__gallery{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    padding: 2rem;
+                    background-color: #0000007b;
+                    z-index: 10;
+
+                    @include response(25rem){
+                        padding: .5rem;
+                    }
+                    
+                    .btn-gallery{
+                        border: 1px solid #fff;
+                        padding: 1rem 2rem;
+                        font-size: 1.4rem;
+                        text-transform: uppercase;
+                        background-color: transparent;
+                        border-radius: 5px;
+                        color: #fff;
+                        cursor: pointer;
+                        margin: 0 auto;
+                        display: inline-block;
+                        margin-bottom: 1rem;
+                        position: absolute;
+                        z-index: 2;
+
+                        &-close{
+                            top: 1rem;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+
+                        &-next{
+                            right: 1rem;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+
+                    img{
+                        width: 80%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        transition: all .2s;
+                        z-index: 1;
+
+                        @include response(25rem){
+                            width: 95%;
+                        }
+                    }
+                }
+            }
         }
 
         .works-hide{

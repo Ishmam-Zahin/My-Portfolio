@@ -7,5 +7,9 @@
 
     & > *{
         padding: 3rem;
+
+        @include response(25rem){
+            padding: 1rem;
+        }
     }
 }

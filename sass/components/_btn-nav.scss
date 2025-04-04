@@ -1,45 +1,55 @@
 .btn-nav{
     position: fixed;
     width: 5rem;
-    height: 0;
+    height: 3rem;
     z-index: 3;
-    border-bottom: 3px solid red;
-    top: 3rem;
-    left: 2rem;
+    top: 1rem;
+    left: 1rem;
     display: none;
 
-    &::before,
-    &::after{
-        content: "";
-        display: block;
+    &__line{
         width: 100%;
         border-bottom: 3px solid red;
-        position: absolute;
-    }
+        position: relative;
 
-    &::before{
-        top: -1rem;
-    }
+        &::before,
+        &::after{
+            content: "";
+            display: block;
+            width: 100%;
+            border-bottom: 3px solid red;
+            position: absolute;
+            transition: all .2s;
+        }
 
-    &::after{
-        top: 1rem;
+        &::before{
+            top: -1rem;
+        }
+    
+        &::after{
+            top: 1rem;
+        }
     }
 
     &--cross{
-        border-bottom: 3px solid transparent;
+        .btn-nav__line{
+            border-bottom: 3px solid transparent;
 
-        &::before{
-            top: 0;
-            transform: rotate(40deg);
-        }
-
-        &::after{
-            top: 0;
-            transform: rotate(-40deg);
+            &::before{
+                top: 0;
+                transform: rotate(40deg);
+            }
+    
+            &::after{
+                top: 0;
+                transform: rotate(-40deg);
+            }
         }
     }
 
     @include response($break-width-1){
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }

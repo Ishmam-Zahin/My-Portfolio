@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <title>M.I.Z</title>
 </head>
 <body>
     <div class="container">
-        <div class="btn-nav" onclick="toggleNav()"></div>
+        <div class="btn-nav" onclick="toggleNav()">
+            <div class="btn-nav__line"></div>
+        </div>
         <nav class="nav-bar nav-hide">
             <img src="img/owner.jpg" alt="owner" class="owner-img">
             <div class="owner-info">
@@ -17,7 +22,7 @@
                 <p class="owner-info__extra">Full Stack Developer from Bangladesh</p>
             </div>
             <nav class="nav-list">
-                <li class="nav-list__item nav-list__item--1"><a href="#home">Home</a></li>
+                <li class="nav-list__item nav-list__item--1"><a href="#home" class="nav-active">Home</a></li>
                 <li class="nav-list__item nav-list__item--2"><a href="#about">About</a></li>
                 <li class="nav-list__item nav-list__item--3"><a href="#services">Services</a></li>
                 <li class="nav-list__item nav-list__item--4"><a href="#skills">Skills</a></li>
@@ -222,7 +227,8 @@
                 <h2 class="heading-2 u-margin-top-large">Experience</h2>
                 <h3 class="heading-3 u-margin-top-small">Work Experience</h3>
                 <div class="experience-container u-margin-top-medium">
-                    <div class="experience">
+                    <div class="experience-container__line"></div>
+                    <div class="experience experience--1">
                         <svg class="icon">
                             <use xlink:href="img/sprite.svg#icon-pencil2"/>
                         </svg>
@@ -231,7 +237,7 @@
                             <p class="experience__text">Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare all put. Added forth chief trees but rooms think may.</p>
                         </div>
                     </div>
-                    <div class="experience">
+                    <div class="experience experience--2">
                         <svg class="icon">
                             <use xlink:href="img/sprite.svg#icon-pencil2"/>
                         </svg>
@@ -240,7 +246,7 @@
                             <p class="experience__text">Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare all put. Added forth chief trees but rooms think may.</p>
                         </div>
                     </div>
-                    <div class="experience">
+                    <div class="experience experience--3">
                         <svg class="icon">
                             <use xlink:href="img/sprite.svg#icon-pencil2"/>
                         </svg>
@@ -254,13 +260,73 @@
             <section class="projects" id="projects">
                 <h2 class="heading-2 u-margin-top-large">Projects</h2>
                 <h3 class="heading-3 u-margin-top-small">My Recent works</h3>
-                <div class="options  u-margin-top-medium">
-                    <button onclick="toggleWorks(0)">CSS</button>
+                <div class="project-options  u-margin-top-medium">
+                    <button onclick="toggleWorks(0)" class="work-active">CSS</button>
                     <button onclick="toggleWorks(1)">REACT</button>
                     <button onclick="toggleWorks(2)">DJANGO</button>
                 </div>
                 <div class="works-container u-margin-top-medium">
-                    <div class="works css-works">css</div>
+                    <div class="works css-works">
+                        <div class="work">
+                            <div class="work-container">
+                                <img src="img/css-1-1.png" alt="bg-1" class="work__bg">
+                                <div class="work__info">
+                                    <span>Project-1</span>
+                                    <button onclick="toggleWorkGallery(this)">screenshots</button>
+                                    <a href="https://ishmam-zahin.github.io/Advanced-CSS/Trillo/index.html" target="_blank">Go Live</a>
+                                    <a href="https://github.com/Ishmam-Zahin/Advanced-CSS" target="_blank">Github</a>
+                                </div>
+                            </div>
+                            <div class="work__gallery hide">
+                                <button onclick="closeWorkGallery(this)" class="btn-gallery btn-gallery-close">Cancel</button>
+                                <img src="img/css-1-1.png" alt="css-2-1">
+                                <img src="img/css-1-2.png" alt="css-1-2">
+                                <button onclick="nextImage()" class="btn-gallery btn-gallery-next">Next</button>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <div class="work-container">
+                                <img src="img/css-2-1.png" alt="bg-1" class="work__bg">
+                                <div class="work__info">
+                                    <span>Project-2</span>
+                                    <button onclick="toggleWorkGallery(this)">screenshots</button>
+                                    <a href="https://ishmam-zahin.github.io/Advanced-CSS/Nexter/index.html" target="_blank">Go Live</a>
+                                    <a href="https://github.com/Ishmam-Zahin/Advanced-CSS" target="_blank">Github</a>
+                                </div>
+                            </div>
+                            <div class="work__gallery hide">
+                                <button onclick="closeWorkGallery(this)" class="btn-gallery btn-gallery-close">Cancel</button>
+                                <img src="img/css-2-1.png" alt="css-2-1">
+                                <img src="img/css-2-2.png" alt="css-2-2">
+                                <img src="img/css-2-3.png" alt="css-2-3">
+                                <img src="img/css-2-4.png" alt="css-2-4">
+                                <img src="img/css-2-5.png" alt="css-2-5">
+                                <img src="img/css-2-6.png" alt="css-2-6">
+                                <button onclick="nextImage()" class="btn-gallery btn-gallery-next">Next</button>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <div class="work-container">
+                                <img src="img/css-3-1.png" alt="bg-1" class="work__bg">
+                                <div class="work__info">
+                                    <span>Project-3</span>
+                                    <button onclick="toggleWorkGallery(this)">screenshots</button>
+                                    <a href="https://ishmam-zahin.github.io/Advanced-CSS/Natours/index.html" target="_blank">Go Live</a>
+                                    <a href="https://github.com/Ishmam-Zahin/Advanced-CSS" target="_blank">Github</a>
+                                </div>
+                            </div>
+                            <div class="work__gallery hide">
+                                <button onclick="closeWorkGallery(this)" class="btn-gallery btn-gallery-close">Cancel</button>
+                                <img src="img/css-3-1.png" alt="css-2-1">
+                                <img src="img/css-3-2.png" alt="css-2-2">
+                                <img src="img/css-3-3.png" alt="css-2-3">
+                                <img src="img/css-3-4.png" alt="css-2-4">
+                                <img src="img/css-3-5.png" alt="css-2-5">
+                                <img src="img/css-3-6.png" alt="css-2-6">
+                                <button onclick="nextImage()" class="btn-gallery btn-gallery-next">Next</button>
+                            </div>
+                        </div>
+                    </div>
                     <div class="works works-hide react-works">react</div>
                     <div class="works works-hide django-works">django</div>
                 </div>

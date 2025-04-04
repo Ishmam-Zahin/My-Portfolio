@@ -23,6 +23,12 @@
         animation-duration: .5s;
         animation-fill-mode: backwards;
 
+        @include response(25rem){
+            padding: 2rem 0;
+            justify-content: center;
+            justify-items: center;
+        }
+
         & > *{
             animation-name: moveUp;
             animation-duration: 1s;
@@ -32,11 +38,20 @@
         &__info{
             font-size: 2rem;
             animation-delay: 100ms;
+
+            @include response(25rem){
+                text-align: center;
+                font-size: 1.5rem;
+            }
         }
 
         a{
             justify-self: start;
             animation-delay: 200ms;
+
+            @include response(25rem){
+                justify-self: center;
+            }
         }
 
         &--1{

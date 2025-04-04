@@ -1,5 +1,13 @@
 .heading-1{
     font-size: 5rem;
+
+    @include response(31.25rem){
+        font-size: 3rem;
+    }
+
+    @include response(25rem){
+        text-align: center;
+    }
 }
 
 .heading-2{
