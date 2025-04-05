@@ -43,32 +43,32 @@
 
         &--1{
             width: 55%;
-            color: blue;
+            color: $color-primary-1;
         }
 
         &--2{
             width: 70%;
-            color: blue;
+            color: $color-primary-2;
         }
 
         &--3{
             width: 80%;
-            color: yellow;
+            color: $color-primary-3;
         }
 
         &--4{
             width: 50%;
-            color: green;
+            color: $color-primary-4;
         }
 
         &--5{
             width: 30%;
-            color: pink;
+            color: $color-primary-5;
         }
 
         &--6{
             width: 90%;
-            color: orange;
+            color: $color-primary-6;
         }
     }
 }

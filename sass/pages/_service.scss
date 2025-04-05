@@ -4,6 +4,32 @@
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         column-gap: 5rem;
         row-gap: 10rem;
+
+        .service-card{
+            &--1{
+                border-bottom: 2px solid $color-primary-1;
+            }
+
+            &--2{
+                border-bottom: 2px solid $color-primary-2;
+            }
+
+            &--3{
+                border-bottom: 2px solid $color-primary-3;
+            }
+
+            &--4{
+                border-bottom: 2px solid $color-primary-4;
+            }
+
+            &--5{
+                border-bottom: 2px solid $color-primary-5;
+            }
+
+            &--6{
+                border-bottom: 2px solid $color-primary-6;
+            }
+        }
     }
 
         .service-counter-container{

@@ -22,3 +22,14 @@
 .u-margin-top-small{
     margin-top: 2rem;
 }
+
+.fade-1{
+    transition: all .5s;
+    transform: translateX(-5rem);
+    opacity: 0;
+}
+
+.default-pos{
+    transform: translate(0, 0) !important;
+    opacity: 1 !important;
+}

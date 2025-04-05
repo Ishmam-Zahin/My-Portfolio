@@ -12,7 +12,7 @@
             grid-column: 1 / 2;
 
             width: .5rem;
-            background-color: grey;
+            background-color: $color-grey-light-2;
             margin-left: 2.3rem;
         }
 
@@ -28,14 +28,27 @@
             .icon{
                 width: 5rem;
                 height: 5rem;
-                border: 5px solid grey;
+                border: 5px solid $color-grey-light-2;
                 border-radius: 50%;
                 background-color: blue;
+                fill: #fff;
+
+                &--1{
+                    background-color: $color-primary-1;
+                }
+
+                &--2{
+                    background-color: $color-primary-2;
+                }
+
+                &--3{
+                    background-color: $color-primary-3;
+                }
             }
 
             .experience-block{
                 position: relative;
-                background-color: grey;
+                background-color: $color-grey-light-2;
                 width: 100%;
                 padding: 2rem 3rem;
 
@@ -47,7 +60,7 @@
                     left: -1rem;
                     width: 1rem;
                     height: 1rem;
-                    background-color: grey;
+                    background-color: $color-grey-light-2;
                     clip-path: polygon(100% 0, 100% 100%, 0 50%);
                 }
             }

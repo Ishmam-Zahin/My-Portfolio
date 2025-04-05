@@ -5,7 +5,24 @@
     &__icon{
         width: 4rem;
         height: 4rem;
+
+        &--1{
+            fill: $color-primary-1;
+        }
+
+        &--2{
+            fill: $color-primary-2;
+        }
+
+        &--3{
+            fill: $color-primary-3;
+        }
+
+        &--4{
+            fill: $color-primary-4;
+        }
     }
+
 
     &__text{
         display: block;

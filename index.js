@@ -5,6 +5,8 @@ const navbar = document.getElementsByClassName("nav-bar")[0];
 const navButton = document.getElementsByClassName("btn-nav")[0];
 const works = document.getElementsByClassName("works-container")[0].children;
 const projectTypes = document.getElementsByClassName("project-options")[0].children;
+const fadeInElements = document.getElementsByClassName("fade-1");
+const rootElement = document.getElementsByClassName("main")[0];
 let workImages = null;
 
 let homeVisible = false;
@@ -73,6 +75,9 @@ function toggleNav(){
 
 
 window.addEventListener("hashchange", () => {
+    console.log(window.innerWidth);
+    if(!window.location.hash) return;
+
     document.querySelector(`[href="${currentActiveLink}"]`).classList.toggle("nav-active");
     currentActiveLink = window.location.hash;
     document.querySelector(`[href="${currentActiveLink}"]`).classList.toggle("nav-active");
@@ -129,4 +134,24 @@ function nextImage(){
     workImages[currentWorkImage].classList.toggle("invisible");
     currentWorkImage = (currentWorkImage + 1) % workImages.length;
     workImages[currentWorkImage].classList.toggle("invisible");
+}
+
+
+/////////////////////
+const headingObserver = new IntersectionObserver((entries) => {
+    console.log(entries);
+    for(let i = 0; i < entries.length; i++){
+        if(entries[i].isIntersecting){
+            entries[i].target.classList.toggle("default-pos");
+            headingObserver.unobserve(entries[i].target);
+        }
+    }
+}, {
+    root: rootElement,
+    threshold: 0,
+    rootMargin: "0px 0px -100px 0px",  
+})
+
+for(let i = 0; i < fadeInElements.length; i++){
+    headingObserver.observe(fadeInElements[i]);
 }

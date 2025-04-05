@@ -160,6 +160,8 @@ body {
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
+  color: #c5c5c5;
+  transition: all 0.5s;
 }
 
 .heading-3 {
@@ -214,6 +216,17 @@ body {
 
 .u-margin-top-small {
   margin-top: 2rem;
+}
+
+.fade-1 {
+  transition: all 0.5s;
+  transform: translateX(-5rem);
+  opacity: 0;
+}
+
+.default-pos {
+  transform: translate(0, 0) !important;
+  opacity: 1 !important;
 }
 
 .home {
@@ -293,7 +306,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #eec280;
+  background-color: #efc14f;
 }
 @media only screen and (max-width: 25rem) {
   .about__block {
@@ -313,6 +326,24 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   column-gap: 5rem;
   row-gap: 10rem;
+}
+.services .service-card-container .service-card--1 {
+  border-bottom: 2px solid #78afee;
+}
+.services .service-card-container .service-card--2 {
+  border-bottom: 2px solid #fc4949;
+}
+.services .service-card-container .service-card--3 {
+  border-bottom: 2px solid #efc14f;
+}
+.services .service-card-container .service-card--4 {
+  border-bottom: 2px solid #ba4acd;
+}
+.services .service-card-container .service-card--5 {
+  border-bottom: 2px solid #3c8937;
+}
+.services .service-card-container .service-card--6 {
+  border-bottom: 2px solid #2e489f;
 }
 .services .service-counter-container {
   display: grid;
@@ -350,7 +381,7 @@ body {
   height: 6.5rem;
 }
 .education .dropdown__header {
-  border: 1px solid green;
+  background-color: #dfdfdf;
   font-size: 2rem;
   padding: 0 3rem;
   cursor: pointer;
@@ -378,10 +409,10 @@ body {
   font-size: 1.8rem;
   padding: 3rem;
   margin-top: 0.5rem;
-  border: 1px solid red;
+  border: 1px solid #dfdfdf;
 }
 .education .dropdown--large .dropdown__header {
-  background-color: blue;
+  background-color: #78afee;
   color: #fff;
 }
 .education .dropdown--large .dropdown__header .plus::after {
@@ -398,7 +429,7 @@ body {
   grid-row: 1/-1;
   grid-column: 1/2;
   width: 0.5rem;
-  background-color: grey;
+  background-color: #dfdfdf;
   margin-left: 2.3rem;
 }
 .experiences .experience-container .experience {
@@ -412,13 +443,23 @@ body {
 .experiences .experience-container .experience .icon {
   width: 5rem;
   height: 5rem;
-  border: 5px solid grey;
+  border: 5px solid #dfdfdf;
   border-radius: 50%;
   background-color: blue;
+  fill: #fff;
+}
+.experiences .experience-container .experience .icon--1 {
+  background-color: #78afee;
+}
+.experiences .experience-container .experience .icon--2 {
+  background-color: #fc4949;
+}
+.experiences .experience-container .experience .icon--3 {
+  background-color: #efc14f;
 }
 .experiences .experience-container .experience .experience-block {
   position: relative;
-  background-color: grey;
+  background-color: #dfdfdf;
   width: 100%;
   padding: 2rem 3rem;
 }
@@ -430,7 +471,7 @@ body {
   left: -1rem;
   width: 1rem;
   height: 1rem;
-  background-color: grey;
+  background-color: #dfdfdf;
   clip-path: polygon(100% 0, 100% 100%, 0 50%);
 }
 .experiences .experience-container .experience__header {
@@ -637,14 +678,14 @@ body {
 }
 .btn-nav__line {
   width: 100%;
-  border-bottom: 3px solid red;
+  border-bottom: 3px solid #000;
   position: relative;
 }
 .btn-nav__line::before, .btn-nav__line::after {
   content: "";
   display: block;
   width: 100%;
-  border-bottom: 3px solid red;
+  border-bottom: 3px solid #000;
   position: absolute;
   transition: all 0.2s;
 }
@@ -681,6 +722,18 @@ body {
   width: 4rem;
   height: 4rem;
 }
+.about-card__icon--1 {
+  fill: #78afee;
+}
+.about-card__icon--2 {
+  fill: #fc4949;
+}
+.about-card__icon--3 {
+  fill: #efc14f;
+}
+.about-card__icon--4 {
+  fill: #ba4acd;
+}
 .about-card__text {
   display: block;
   font-size: 1.7rem;
@@ -694,7 +747,6 @@ body {
   border-bottom: 2px solid red;
 }
 .service-card__icon {
-  border: 1px solid blue;
   background-color: grey;
   display: inline-block;
   padding: 4rem;
@@ -704,6 +756,25 @@ body {
 .service-card__icon svg {
   width: 3rem;
   height: 3rem;
+  fill: #fff;
+}
+.service-card__icon--1 {
+  background-color: #78afee;
+}
+.service-card__icon--2 {
+  background-color: #fc4949;
+}
+.service-card__icon--3 {
+  background-color: #efc14f;
+}
+.service-card__icon--4 {
+  background-color: #ba4acd;
+}
+.service-card__icon--5 {
+  background-color: #3c8937;
+}
+.service-card__icon--6 {
+  background-color: #2e489f;
 }
 .service-card__para {
   font-size: 1.7rem;
@@ -752,27 +823,27 @@ body {
 }
 .progress-bar__bg--1 {
   width: 55%;
-  color: blue;
+  color: #78afee;
 }
 .progress-bar__bg--2 {
   width: 70%;
-  color: blue;
+  color: #fc4949;
 }
 .progress-bar__bg--3 {
   width: 80%;
-  color: yellow;
+  color: #efc14f;
 }
 .progress-bar__bg--4 {
   width: 50%;
-  color: green;
+  color: #ba4acd;
 }
 .progress-bar__bg--5 {
   width: 30%;
-  color: pink;
+  color: #3c8937;
 }
 .progress-bar__bg--6 {
   width: 90%;
-  color: orange;
+  color: #2e489f;
 }
 
 /*# sourceMappingURL=style.css.map */
