@@ -262,13 +262,14 @@
                 <h3 class="heading-3 u-margin-top-small fade-1">My Recent works</h3>
                 <div class="project-options  u-margin-top-medium fade-1">
                     <button onclick="toggleWorks(0)" class="work-active">CSS</button>
-                    <button onclick="toggleWorks(1)">REACT</button>
-                    <button onclick="toggleWorks(2)">DJANGO</button>
+                    <button onclick="toggleWorks(1)">JS</button>
+                    <button onclick="toggleWorks(2)">REACT</button>
+                    <button onclick="toggleWorks(3)">DJANGO</button>
                 </div>
                 <div class="works-container u-margin-top-medium">
                     <div class="works css-works">
                         <div class="work">
-                            <div class="work-container">
+                            <div class="work-container fade-1">
                                 <img src="img/css-1-1.png" alt="bg-1" class="work__bg">
                                 <div class="work__info">
                                     <span>Project-1</span>
@@ -285,7 +286,7 @@
                             </div>
                         </div>
                         <div class="work">
-                            <div class="work-container">
+                            <div class="work-container fade-1">
                                 <img src="img/css-2-1.png" alt="bg-1" class="work__bg">
                                 <div class="work__info">
                                     <span>Project-2</span>
@@ -306,7 +307,7 @@
                             </div>
                         </div>
                         <div class="work">
-                            <div class="work-container">
+                            <div class="work-container fade-1">
                                 <img src="img/css-3-1.png" alt="bg-1" class="work__bg">
                                 <div class="work__info">
                                     <span>Project-3</span>
@@ -323,6 +324,26 @@
                                 <img src="img/css-3-4.png" alt="css-2-4">
                                 <img src="img/css-3-5.png" alt="css-2-5">
                                 <img src="img/css-3-6.png" alt="css-2-6">
+                                <button onclick="nextImage()" class="btn-gallery btn-gallery-next">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works works-hide js-works">
+                        <div class="work">
+                            <div class="work-container fade-1">
+                                <img src="img/js-1-1.png" alt="bg-1" class="work__bg">
+                                <div class="work__info">
+                                    <span>Project-1</span>
+                                    <button onclick="toggleWorkGallery(this)">screenshots</button>
+                                    <a href="https://ishmam-zahin.github.io/PackMan-game-Javascript/packMan.html" target="_blank">Go Live</a>
+                                    <a href="https://github.com/Ishmam-Zahin/PackMan-game-Javascript" target="_blank">Github</a>
+                                </div>
+                            </div>
+                            <div class="work__gallery hide">
+                                <button onclick="closeWorkGallery(this)" class="btn-gallery btn-gallery-close">Cancel</button>
+                                <img src="img/js-1-1.png" alt="css-2-1">
+                                <img src="img/js-1-2.png" alt="css-1-2">
+                                <img src="img/js-1-3.png" alt="css-1-3">
                                 <button onclick="nextImage()" class="btn-gallery btn-gallery-next">Next</button>
                             </div>
                         </div>
