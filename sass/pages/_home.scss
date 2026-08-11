@@ -62,6 +62,16 @@
         &--2{
             background-image: linear-gradient(to right bottom, rgba(#fff, .7), rgba($color-grey-light-1, .7)), url("../img/bg-2.jpg");
         }
+
+        .btn-group {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+
+            .pupil-btn{
+                color: #3c8937;
+            }
+        }
     }
 
     .home-progress{

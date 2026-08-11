@@ -23,10 +23,30 @@
     margin-top: 2rem;
 }
 
-.fade-1{
+.observer-wrapper{
+    // border: 1px solid red;
+    z-index: inherit;
+}
+
+.fade{
     transition: all .5s;
-    transform: translateX(-5rem);
     opacity: 0;
+}
+
+.fade-1{
+    transform: translateX(-5rem);
+}
+
+.fade-2{
+    transform: translateY(-5rem);
+}
+
+.fade-3{
+    transform: translateY(5rem);
+}
+
+.fade-4{
+    transform: translateX(5rem);
 }
 
 .default-pos{

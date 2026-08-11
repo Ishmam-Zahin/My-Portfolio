@@ -5,7 +5,7 @@ const navbar = document.getElementsByClassName("nav-bar")[0];
 const navButton = document.getElementsByClassName("btn-nav")[0];
 const works = document.getElementsByClassName("works-container")[0].children;
 const projectTypes = document.getElementsByClassName("project-options")[0].children;
-const fadeInElements = document.getElementsByClassName("fade-1");
+const fadeInElements = document.getElementsByClassName("observer-wrapper");
 const rootElement = document.getElementsByClassName("main")[0];
 const homeProgressIndicator = document.querySelector('.home-progress__indicator');
 const homeProgressRadius = 28;
@@ -180,7 +180,13 @@ function nextImage(){
 const headingObserver = new IntersectionObserver((entries) => {
     for(let i = 0; i < entries.length; i++){
         if(entries[i].isIntersecting){
-            entries[i].target.classList.toggle("default-pos");
+            const fadeDiv = entries[i].target.querySelector(".fade");
+            if(fadeDiv){
+                fadeDiv.classList.toggle("default-pos");
+            }
+            else{
+                entries[i].target.classList.toggle("default-pos");
+            }
             headingObserver.unobserve(entries[i].target);
         }
     }
