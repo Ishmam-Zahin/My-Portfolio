@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "watch": "sass sass/main.scss css/style-uncompressed.css -w",
+    "watch": "sass sass/main.scss css/style.css -w",
     "devserver": "live-server --port=5500",
     "start": "npm-run-all -p watch devserver",
 
     "compile:sass": "sass sass/main.scss css/style-uncompressed.css",
-    "compress:css": "sass css/style-uncompressed.css css/style.css --output-style compressed",
+    "compress:css": "sass --style=compressed css/style-uncompressed.css css/style.css",
     "build": "npm-run-all compile:sass compress:css"
   },
   "author": "zahin",

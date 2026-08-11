@@ -7,22 +7,30 @@ const works = document.getElementsByClassName("works-container")[0].children;
 const projectTypes = document.getElementsByClassName("project-options")[0].children;
 const fadeInElements = document.getElementsByClassName("fade-1");
 const rootElement = document.getElementsByClassName("main")[0];
-let workImages = null;
+const homeProgressIndicator = document.querySelector('.home-progress__indicator');
+const homeProgressRadius = 28;
+const homeProgressCircumference = 2 * Math.PI * homeProgressRadius;
+const homeInterval = 10000; // in milliseconds
 
+let workImages = null;
 let homeVisible = false;
 let navBarOpen = false;
 let homeTimer = null;
 let currentWorks = 0;
 let currentWorkImage = 0;
 let currentActiveLink = "#home";
+let lastHomeTime = null;
 
 const homeOvserver = new IntersectionObserver(entries => {
     if(entries[0].isIntersecting){
         homeVisible = true;
+        lastHomeTime = Date.now();
+        updateHomeProgress(0);
         start();
     }
     else{
         homeVisible = false;
+        lastHomeTime = null;
         stopToggleHome();
     }
 }, {
@@ -34,9 +42,38 @@ homeOvserver.observe(home);
 
 function start(){
     homeTimer = setTimeout(() => {
-        invisible();
-    }, 8000);
+        const currHomeTime = Date.now();
+        if(currHomeTime - lastHomeTime < homeInterval){
+            const currDiff = currHomeTime - lastHomeTime;
+            const completed = Math.floor((currDiff / homeInterval) * 100);
+            updateHomeProgress(completed);
+            start();
+        }
+        else{
+            updateHomeProgress(100);
+            invisible();
+        }
+    }, 100);
 }
+
+function updateHomeProgress(percent){
+    if(!homeProgressIndicator) return;
+
+    const clamped = Math.min(100, Math.max(0, percent));
+    const offset = homeProgressCircumference * (1 - clamped / 100);
+
+    homeProgressIndicator.style.strokeDasharray = `${homeProgressCircumference}`;
+    homeProgressIndicator.style.strokeDashoffset = offset;
+}
+
+function initializeHomeProgress(){
+    if(!homeProgressIndicator) return;
+
+    homeProgressIndicator.style.strokeDasharray = `${homeProgressCircumference}`;
+    homeProgressIndicator.style.strokeDashoffset = `${homeProgressCircumference}`;
+}
+
+initializeHomeProgress();
 
 function invisible(){
     home1.classList.toggle("invisible");
@@ -52,12 +89,15 @@ function toggleHome(){
     home2.classList.toggle("hide");
 
     if(homeVisible){
+        lastHomeTime = Date.now();
+        updateHomeProgress(0);
         start();
     }
 }
 
 function stopToggleHome(){
     if(homeTimer) clearTimeout(homeTimer);
+    updateHomeProgress(0);
 }
 
 
@@ -75,7 +115,6 @@ function toggleNav(){
 
 
 window.addEventListener("hashchange", () => {
-    console.log(window.innerWidth);
     if(!window.location.hash) return;
 
     document.querySelector(`[href="${currentActiveLink}"]`).classList.toggle("nav-active");
@@ -139,7 +178,6 @@ function nextImage(){
 
 /////////////////////
 const headingObserver = new IntersectionObserver((entries) => {
-    console.log(entries);
     for(let i = 0; i < entries.length; i++){
         if(entries[i].isIntersecting){
             entries[i].target.classList.toggle("default-pos");
