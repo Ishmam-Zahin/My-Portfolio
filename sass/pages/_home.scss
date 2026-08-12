@@ -88,11 +88,11 @@
         display: grid;
         place-items: center;
 
-        @include response(25rem){
+        @include response(40rem){
             top: 1rem;
             right: 1rem;
-            width: 3rem;
-            height: 3rem;
+            width: 4rem;
+            height: 4rem;
             padding: 4px;
         }
 
